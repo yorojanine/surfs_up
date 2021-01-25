@@ -81,3 +81,6 @@ def stats(start=None, end=None):
         filter(Measurement.date <= end).all()
     temps = list(np.ravel(results))
     return jsonify(temps=temps)
+
+if __name__ == "__main__":
+    app.run(debug=True,port=9999)
